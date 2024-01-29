@@ -1,16 +1,26 @@
 """
-Write a Python function named morse_translator that translates a given string into Morse code.
+Morse Code Translator Function
 
-Each alphabetic character in the string should be translated to its corresponding Morse code equivalent.
-The Morse code for each character should be separated by a space.
-Each word in the string should be separated by a forward slash (/).
-The function should handle both uppercase and lowercase alphabetic characters.
-The function should be case-insensitive, meaning it treats uppercase and lowercase letters the same.
-Non-alphabetic characters (like numbers or symbols) should not be translated.
+Objective:
+Write a function named 'morse_translator' that translates a given string into Morse code.
 
-https://en.wikipedia.org/wiki/Morse_code
+Function Parameter:
+text (string): The string to be translated into Morse code.
+
+Instructions:
+- Each alphabetic character in the string should be translated to its corresponding Morse code equivalent.
+- The Morse code for each character should be separated by a space.
+- Each word in the string should be separated by a forward slash (/).
+- The function should handle both uppercase and lowercase alphabetic characters.
+- The function should be case-insensitive, meaning it treats uppercase and lowercase letters the same.
+- Non-alphabetic characters (like numbers or symbols) should not be translated.
+- https://en.wikipedia.org/wiki/Morse_code
+
+Example Test Cases:
+1. morse_translator("HELLO WORLD") should return the Morse code for the given string.
+2. morse_translator("Python") should return the Morse code for the given string.
+3. morse_translator("Morse Code") should return the Morse code for the given string.
 """
-
 
 
 def morse_translator(text):
@@ -42,23 +52,31 @@ def morse_translator(text):
         "X": "-..-",
         "Y": "-.--",
         "Z": "--..",
-    }    
-    translated_text = []
-    words = text.split()
-    for word in words:
-        translated_word =[]
-        for char in word:
-            if char.upper() in morse_code_dict:
-                translated_word.append(morse_code_dict[char.upper()])
-        translated_text.append(' '.join(translated_word))
-    return ' / '.join(translated_text)
+    }
+    text = text.upper()
+
+    morse_code_list = []
+
+    for char in text:
+        if char.isalpha():
+            if char in morse_code_dict:
+                morse_code_list.append(morse_code_dict[char])
+        elif char == " ": 
+            morse_code_list.append("/")
+
+    morse_code_string = " ".join(morse_code_list)
+
+    return morse_code_string
     # Your code goes here
+    # Remember to consider both upper and lower case letters, and spaces
+    # The function should return the translated Morse code string
 
 
 # Test cases
-print(morse_translator("HELLO WORLD"))  
-# Expected output: ".... . .-.. .-.. --- / .-- --- .-. .-.. -.."
-print(morse_translator("Python"))  
-# Expected output: ".--. -.-- - .... --- -."
-print(morse_translator("Morse Code"))  
-# Expected output: "-- --- .-. ... . / -.-. --- -.. ."
+print(
+    morse_translator("HELLO WORLD")
+)  # Expected output: ".... . .-.. .-.. --- / .-- --- .-. .-.. -.."
+print(morse_translator("Python"))  # Expected output: ".--. -.-- - .... --- -."
+print(
+    morse_translator("Morse Code")
+)  # Expected output: "-- --- .-. ... . / -.-. --- -.. ."
