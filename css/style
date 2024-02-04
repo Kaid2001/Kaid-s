@@ -10,7 +10,7 @@ h1 {
     margin-top: 20px;
 }
 
-.order-button {
+button {
     background-color: #ff6600;
     color: #fff;
     border: none;
@@ -31,20 +31,6 @@ footer {
     margin: 0 20px;
 }
 
-.social-media {
-    margin-top: 10px;
-}
-
-.social-media a {
-    text-decoration: none;
-    color: #fff;
-    margin: 0 10px;
-}
-.social-icon {
-    width: 32px; /* 设置宽度 */
-    height: 32px; /* 设置高度 */
-    margin: 0 5px; /* 可选：设置图标之间的间距 */
-}
 
 body {
     font-family: Arial, sans-serif;
@@ -95,82 +81,3 @@ h2 {
     color: #7d01ca;
 }
 
-.list-group {
-    list-style: none;
-    padding: 0;
-}
-
-.list-group-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    border: 1px solid #ddd;
-    margin-bottom: 10px;
-    background-color: #f9f9f9;
-}
-
-.list-group-item:hover {
-    background-color: #eee;
-}
-
-.list-group-item span {
-    font-weight: bold;
-    color: #333;
-}
-
-.menu-container {
-    background-color: #ffffff;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.menu-title {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #7d01ca;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.menu-list {
-    list-style: none;
-    padding: 0;
-}
-
-.menu-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    border: 1px solid #ddd;
-    margin-bottom: 10px;
-    background-color: #f9f9f9;
-}
-
-.menu-item:hover {
-    background-color: #eee;
-}
-
-.menu-info {
-    flex: 1;
-    margin-right: 10px;
-}
-
-.menu-price {
-    font-weight: bold;
-    color: #333;
-}
-.opening-hours {
-    font-size: 18px;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.address {
-    font-size: 18px;
-    margin-top: 20px;
-    color: #333;
-}
